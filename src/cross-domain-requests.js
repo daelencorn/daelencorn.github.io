@@ -1,7 +1,7 @@
 function requestCrossDomain( site, callback ) {
 
   if ( !site) {
-     alert('no site found')
+     alert('no site found');
      return false;
   }
 
