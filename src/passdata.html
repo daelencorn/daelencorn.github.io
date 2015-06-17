@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content Type"content="text/html; charset=utf-8">
+    <title>data</title>
+</head>
+<body>
+  <h1>Cross-Domain requests</h1>
+  <div id="container">
+    <form>
+      <p><label>URL : </label> <input type="text" name="sitename" id="sitename" /></p>
+      <p><input type="submit" name="submit" id="submit" value="Make Request"></p>
+    </form>
+  </div>
+  
+  
+<script src="http://ajaz.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"
+charset="urf-8"></script>
+<script type="text/javascript" src="cross-domain-requests.js"></script>
+
+<script type="text/javascript">
+
+$('Form').submit(function() {
+  var path = $('#sitename').val();
+  
+  requestCrossDomain(path, function(results) {
+    $('#container').html(results);
+  });
+  
+  return false;
+});
+
+</script
+</body
+</html>
